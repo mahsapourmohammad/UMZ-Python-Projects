@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+            body {
+      background-color: #E8DFCA;
+}
+
+    </style>
+    
+</head>
+<body>
+   <div style="width: 600px; margin: 0 auto;">
+        <h1>Your weekly program</h1>
+        <ol>
+            {% for food in week_list  %}
+               <h2> <li>{{food|title}}</li></h2>
+                
+            {% endfor %}
+        </ol>
+
+        <h1>You may need to buy these ingredients</h1>
+        <ul>
+            {%for item in buy_list%}
+            <h2><li>{{item|title}}</li></h2>
+            {%endfor%}
+        </ul>
+   </div>
+   
+</body>
+</html>

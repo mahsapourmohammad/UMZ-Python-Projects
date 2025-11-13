@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    body {
+      background-color: #E8DFCA;
+      }
+      h1 {
+        font-size: 36px;
+        color: #333;
+      }
+      button{
+  width: 100%;
+  background-color: #4CAF50;
+  color:#E8DFCA;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover{
+  background-color: #1A4D2E;
+}
+
+   </style>
+</head>
+<body>
+
+  <div style="width: 600px; margin: 0 auto;">
+    <ul>
+
+      {%for ing in ingredients%}
+      <li>
+        <h1>{{ing.name|title}} | {{ing.quantity}} {{ing.quantity_value}} </h1>
+
+      </li>
+      {% endfor %}
+    </ul>
+
+   <a href="edit/"><button>add or update ingredients</button></a>
+  </div>
+</body>
+</html>
